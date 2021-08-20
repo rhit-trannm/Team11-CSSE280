@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/splide.min.css">
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link rel="stylesheet" href="styles/main.css">
+  <title>App Name</title>
+  <style>
+    body {
+      background-image: url("image/bg.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+</head>
+<header class="bmd-layout-header">
+  <div class="navbar navbar-dark bg-faded fixed-top">
+    <a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;<img src="image/FoodCalls.png" width="75px" height="75px" style="object-fit: cover;"alt=""></a>
+    <a id="menuSignOut" class="navbar-nav"><i class="material-icons">login</i>Sign Out</a>
+  </div>
+</header>
+
+
+
+
+<body>
+  <div id="firebaseui-auth-container" hidden></div>
+  <div id="mapPage" class="container">
+
+    <div class="scrollnav splide">
+      <div class="splide__track">
+        <div class="row splide__list">
+          <div class="col splide__slide" id="fastfood">
+            <img src="image/fastfood.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">fastfood</p>
+          </div>
+          <div class="col splide__slide" id="chicken">
+            <img src="image/chicken.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">chicken</p>
+          </div>
+          <div class="col splide__slide" id="asian">
+            <img src="image/asian.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">asian</p>
+          </div>
+          <div class="col splide__slide" id="mexican">
+            <img src="image/taco.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">mexican</p>
+          </div>
+          <div class="col splide__slide" id="sandwhich">
+            <img src="image/sandwhich.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">sandwhich</p>
+          </div>
+          <div class="col splide__slide" id="japanese">
+            <img src="image/sushi.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">japanese</p>
+          </div>
+          <div class="col splide__slide" id="coffee">
+            <img src="image/coffee.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">coffee</p>
+          </div>
+          <div class="col splide__slide" id="soup">
+            <img src="image/soup.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">soup</p>
+          </div>
+          <div class="col splide__slide" id="seafood">
+            <img src="image/shrimp.png" class="img-fluid" alt="">
+            <p id="foodText" style="text-align: center;">seafood</p>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <div id="locations" class="d-flex justify-content-center">
+      <button onclick="getLocation()" class="btn btn-primary" style="font-size: 1.5rem;" >Location</button>
+      <p id="demo"></p>
+    </div>
+    <div id="map"></div>
+    <div id="locations" class="d-flex justify-content-center">
+      <button id="randomizer" class="btn btn-primary" style="font-size: 1.5rem;">Random</button>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="resultsText">Some text in the Modal..</p>
+      </div>
+
+    </div>
+
+
+    <div id="colap"><button type="button" class="collapsible">Restaurant List</button>
+    </div>
+
+
+  </div>
+  <!-- <div id="mainPage" class="container page-container"> -->
+
+
+  </div>
+  <!-- script for collapsible -->
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script src="scripts/main.js"></script>
+
+  <!-- <script>
+    new Splide('.splide', {
+      type: 'loop',
+      perPage: 5,
+      perMove: 5,
+    }).mount();
+    console.log("splide loading");
+  </script> -->
+
+</body>
+
+</html>
